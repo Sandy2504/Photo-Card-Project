@@ -1,0 +1,189 @@
+/* General */
+
+* {
+  margin: 0;
+  --page-background-color-night: black;
+  --page-text-color-night: white;
+}
+
+body {
+  background-color: rgb(32, 191, 235);
+}
+
+/* ==== Header ==== */
+.header {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+h1 {
+  border-left: 1rem solid rgb(89, 0, 255);
+  margin-bottom: 2rem;
+  text-align: end;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: rgb(89, 0, 255);
+}
+
+.header-text {
+  margin-right: 10%;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+}
+
+.header-text a {
+  text-decoration: none;
+  color: rgb(89, 0, 255);
+  font-size: 1.4rem;
+  transition-duration: 0.5s;
+}
+
+.header-text a:hover,
+.header-text a:focus {
+  background-color: rgb(254, 120, 247);
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+/* ==== Container ===== */
+main {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.container {
+  position: relative;
+  background-color: white;
+  width: 400px;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 40px rgb(89, 0, 255);
+  transition: 0.3s;
+  margin-bottom: 3rem;
+}
+
+.container:hover {
+  box-shadow: 0 0 40px 3px rgb(89, 0, 255);
+}
+
+.images {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.natur {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s;
+}
+
+.natur:hover {
+  transform: scale(1.2);
+}
+
+.star {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform-origin: 0 0;
+  transition: transform 1s ease-in-out;
+  opacity: 0.3;
+}
+
+.container:hover .star,
+.star:hover {
+  transform: translate(-100%, 100%) rotate(360deg);
+  opacity: 1;
+}
+
+h2 {
+  padding: 1rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.container > p {
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* ==== Media Queries ==== */
+
+@media screen and (max-width: 640px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .header-text {
+    margin-right: 15%;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--page-background-color-night);
+    color: var(--page-text-color-night);
+  }
+  .container {
+    background-color: var(--page-background-color-night);
+  }
+
+  .header-text a {
+    color: rgb(255, 16, 243);
+  }
+  .header-text a:hover,
+  .header-text a:focus {
+    background-color: rgb(89, 0, 255);
+  }
+}
+
+/* =========  footer ========= */
+
+#footer {
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 15rem;
+}
+
+.sos {
+  border-left: 0.5rem solid rgb(89, 0, 255);
+  margin-left: 3rem;
+  position: relative;
+}
+
+.fa-user {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  color: white;
+}
+
+.fa-paw {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  color: white;
+}
+
+.fa-envelope {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.6rem;
+  color: white;
+}
+
+.sos h2 {
+  padding-top: 0;
+  color: rgb(89, 0, 255);
+}
+
+.sos p {
+  margin-right: 2rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  color: white;
+}
