@@ -1,6 +1,7 @@
 /* General */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   --page-background-color-night: black;
   --page-text-color-night: white;
@@ -111,16 +112,6 @@ h2 {
 
 /* ==== Media Queries ==== */
 
-@media screen and (max-width: 640px) {
-  body {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .header-text {
-    margin-right: 15%;
-  }
-}
-
 @media screen and (prefers-color-scheme: dark) {
   body {
     background-color: var(--page-background-color-night);
@@ -128,6 +119,10 @@ h2 {
   }
   .container {
     background-color: var(--page-background-color-night);
+  }
+
+  .images {
+    background-color: black;
   }
 
   .header-text a {
@@ -186,4 +181,47 @@ h2 {
   padding-left: 1rem;
   font-size: 1rem;
   color: white;
+}
+
+@media screen and (min-width: 901px) {
+  .container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .list-view {
+    display: none;
+  }
+
+  #footer {
+    display: block;
+  }
+  .sos {
+    margin-bottom: 2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .header-text {
+    margin-right: 5%;
+  }
+  .sos {
+    margin-bottom: 2rem;
+    margin-left: 9%;
+    padding-bottom: 2rem;
+  }
+  .sos p {
+    margin-right: 0;
+  }
 }
